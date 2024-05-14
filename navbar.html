@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #ffffff;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      font-family: "Quicksand", sans-serif;
+      margin: 0;
+    }
+
+    .menu {
+      display: none;
+    }
+    .logo {
+      width: 150px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      margin: 0;
+      width: 100vw;
+      box-sizing: border-box;
+      height: 60px;
+      border-bottom: 1px solid var(--very-light-pink);
+    }
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+    .navbar-left ul, .navbar-right ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+    .navbar-left ul {
+      margin-left: 24px;
+    }
+
+    .navbar-left li {
+      display: inline-block;
+    }
+    .navbar-left a, .navbar-right a  {
+      text-decoration: none;
+      color: var(--very-light-pink);
+      border: 1px solid var(--white);
+      padding: 8px;
+      border-radius: 8px;
+    }
+    .navbar-left a:hover {
+      color: var(--hospital-green);
+      border: 1px solid var(--hospital-green);
+    }
+    .navbar-email {
+      color: var(--very-light-pink);
+      font-size: var(--sm);
+      margin-right: 16px;
+    }
+    .navbar-shopping-cart {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+    }
+    .cart-items {
+      width: 16px;
+      height: 16px;
+      background: var(--hospital-green);
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+      position: absolute;
+      top: -6px;
+      right: -2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media(max-width: 640px) {
+      .menu {
+        display: block;
+      }
+      .navbar-left ul {
+        display: none;
+      }
+      .navbar-email {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+
+    <div class="navbar-left">
+      <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+      <ul>
+        <li><a href="/">All</a></li>
+        <li><a href="/">Clothes</a></li>
+        <li><a href="/">Electronics</a></li>
+        <li><a href="/">Furnitures</a></li>
+        <li><a href="/">Toys</a></li>
+        <li><a href="/">Others</a></li>
+      </ul>
+    </div>
+    <div class="navbar-right">
+      <ul>
+        <li class="navbar-email">platzi@example.com</li>
+        <li class="navbar-shopping-cart">
+          <img src="./icons/icon_shopping_cart.svg" alt="shopping-cart">
+          <div class="cart-items">2</div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</body>
+</html>
