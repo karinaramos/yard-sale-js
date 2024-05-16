@@ -1,0 +1,140 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-pink: #C7C7C7;
+  --text-input-field: #F7F7F7;
+  --hospital-green: #ACD9B2;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+}
+.inactive {
+  display: none;
+}
+
+/*NAV BAR*/
+.menu {
+  display: none;
+}
+.logo {
+  width: 150px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  height: 60px;
+  border-bottom: 1px solid var(--very-light-pink);
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.navbar-left ul, .navbar-right ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.navbar-left ul {
+  margin-left: 24px;
+}
+
+.navbar-left li {
+  display: inline-block;
+}
+.navbar-left a, .navbar-right a  {
+  text-decoration: none;
+  color: var(--very-light-pink);
+  border: 1px solid var(--white);
+  padding: 8px;
+  border-radius: 8px;
+}
+.navbar-left a:hover {
+  color: var(--hospital-green);
+  border: 1px solid var(--hospital-green);
+}
+.navbar-email {
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-right: 16px;
+  cursor: pointer;
+}
+.navbar-shopping-cart {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.cart-items {
+  width: 16px;
+  height: 16px;
+  background: var(--hospital-green);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: -6px;
+  right: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*MENU ACCOUNT*/
+.desktop-menu {
+  width: 100px;
+  height: auto;
+  border: 1px solid var(--very-light-pink);
+  border-radius: 6px;
+  padding: 20px 20px 0;
+  position: absolute;
+  right: 60px;
+  top: 59px;
+  background: var(--white);
+}
+.desktop-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.desktop-menu ul li {
+  text-align: end;
+}
+.desktop-menu ul li:last-child {
+  padding-top: 20px;
+  border-top: 1px solid var(--very-light-pink);
+}
+.desktop-menu ul li:last-child a {
+  color: var(--hospital-green);
+  font-size: var(--sm);
+}
+.desktop-menu li:not(:last-child) {
+  font-weight: bold;
+}
+.desktop-menu li a {
+  display: inline-block;
+  color: var(--black);
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+@media(max-width: 640px) {
+  .menu {
+    display: block;
+  }
+  .navbar-left ul {
+    display: none;
+  }
+  .navbar-email {
+    display: none;
+  }
+}
