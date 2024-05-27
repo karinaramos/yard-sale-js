@@ -65,7 +65,7 @@
       </div>
     </div>
   </nav>
-  <aside class="product-detail inactive" id="shopping-cart">
+  <aside id="shoppingCartContainer" class="inactive">
     <div class="my-order-container">
       <div>
         <div class="title-container">
@@ -111,12 +111,27 @@
       </button>
     </div>
   </aside>
-
+  <aside id="productDetail" class="inactive">
+    <div class="product-detail-close">
+      <img src="./icons/icon_close.png" alt="close">
+    </div>
+    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940g" alt="product" class="img-product">
+    <div class="product-info">
+      <p>$120.00</p>
+      <p>Bike</p>
+      <p class="product-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <button class="primary-button add-to-cart-button">
+        <img src="./icons/icon_shopping_cart.svg" alt="shopping-cart"> Add to cart
+      </button>
+    </div>
+  </aside>
   <section class="main-container">
     <div class="cards-container">
       
     </div>
-    </section>
+  </section>
+  
   <script src="./main.js"></script>
 </body>
 </html>
